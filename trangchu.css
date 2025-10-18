@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-container {
+    width: 100%;
+    min-height: 80px;
+    font-size: 14px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bentrai {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+.benphai {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.icon img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.menu {
+    display: flex;
+    margin-left: 34px;
+}
+
+.menuitem {
+    margin-left: 20px;
+}
+
+.thanhtimkiem {
+    flex: 1 1 auto;
+    max-width: 700px;
+    height: 40px;
+    margin-left: 78px;
+    border-radius: 20px;
+    border: solid 3px #BBBBBB;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timkiem p {
+    color: #BBBBBB;
+}
+
+.iconsearch {
+    margin-right: 23px;
+    color: #707070;
+}
+
+.dangnhap {
+    width: 98px;
+    height: 40px;
+    margin-left: 20px;
+    border: solid 2px #BBBBBB;
+    color: #000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dangky {
+    width: 98px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: #FAC62D;
+    border-radius: 10px;
+    color: #000;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* anhnen gioithieu */
+.anhnen {
+    background-image: url('imghome/qwe.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 506px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.noidunganhnen {
+    width: 417px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    color: white;
+    margin-left: 74px;
+    margin-bottom: 35px;
+}
+
+.noidunganhnen h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.noidunganhnen p {
+    font-size: 23px;
+}
+
+.nutbatdau p {
+    font-size: 16px;
+}
+
+.nutbatdau {
+    color: black;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FAC62D;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* phan gioi thieu */
+/*phần ảnh khung 1*/
+.khung {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #FFC21A;
+    display: flex;
+    gap: 20px;
+    padding: 18px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.anhbenphai {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.anh1.responsive {
+    background-image: url('imghome/anhnen1.png');
+}
+
+.anh2.responsive {
+    background-image: url('imghome/anhnen2.png');
+}
+
+.anh3.responsive {
+    background-image: url('imghome/anhnen3.png');
+}
+
+.anh4.responsive {
+    background-image: url('imghome/anhnen4.png');
+}
+
+.anh5.responsive {
+    background-image: url('imghome/anhnen5.png');
+}
+
+.anh6.responsive {
+    background-image: url('imghome/anhnen6.png');
+}
+
+/*lưu ý chỗ này */
+.anh1.responsive,
+.anh2.responsive,
+.anh3.responsive,
+.anh4.responsive,
+.anh5.responsive,
+.anh6.responsive {
+    width: 267px;
+    height: 178px;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border-radius: 10px;
+    ;
+}
+
+.noidunganh {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 55px;
+    /*lưu ý chỗ này */
+}
+
+.noidunganh h2 {
+    font-size: 31px;
+    margin-bottom: 26px;
+    margin-top: 26px;
+}
+
+.noidunganh p {
+    font-size: 20px;
+}
+
+.nutkhampha p {
+    font-size: 15px;
+}
+
+.nutkhampha {
+    padding: 10px 20px;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+/*phần khung 2*/
+.khung2 {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    display: flex;
+    gap: 20px;
+    padding: 18px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+.noidungkhung2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 55px;
+}
+
+.noidungkhung2 h2 {
+    font-size: 31px;
+    margin-bottom: 26px;
+    margin-top: 26px;
+}
+
+.noidungkhung2 p {
+    font-size: 20px;
+}
+
+.xemthietke p {
+    font-size: 15px;
+}
+
+.xemthietke {
+    padding: 10px 20px;
+    background-color: #FFC21A;
+    border-radius: 5px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.anhbentrai {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.anhtrai1,
+.anhtrai2,
+.anhtrai3,
+.anhtrai4,
+.anhtrai5,
+.anhtrai6 {
+    width: 267px;
+    height: 178px;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    border-radius: 10px;
+    ;
+}
+
+.anhtrai1 {
+    background-image: url('imghome/anhtrai1.png');
+}
+
+.anhtrai2 {
+    background-image: url('imghome/anhtrai2.png');
+}
+
+.anhtrai3 {
+    background-image: url('imghome/anhtrai3.png');
+}
+
+.anhtrai4 {
+    background-image: url('imghome/anhtrai4.png');
+}
+
+.anhtrai5 {
+    background-image: url('imghome/anhtrai5.png');
+}
+
+.anhtrai6 {
+    background-image: url('imghome/anhtrai6.png');
+}
+
+/*end phần khung 2*/
+/*phần sản phẩm */
+.tieu-de-chinh {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 24px;
+    margin-left: 12%;
+}
+
+.khung31 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.dau-muc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tieu-de-muc {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.xem-tat-ca {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.luoi-san-pham {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/*lưu ý chỗ này */
+.the-san-pham {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    flex: 1 1 260px;
+    max-width: calc(25% - 12px);
+}
+
+/*lưu ý chỗ này */
+.hinh-anh-san-pham {
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hinh-1 {
+    background-image: url('imghome/anhsp1.png');
+}
+
+.hinh-2 {
+    background-image: url('imghome/anhsp2.png');
+}
+
+.hinh-3 {
+    background-image: url('imghome/anhsp3.png');
+}
+
+.hinh-4 {
+    background-image: url('imghome/anhsp4.png');
+}
+
+.hinh-5 {
+    background-image: url('imghome/anhsp5.png');
+}
+
+.hinh-6 {
+    background-image: url('imghome/anhsp6.png');
+}
+
+.hinh-7 {
+    background-image: url('imghome/anhsp7.png');
+}
+
+.hinh-8 {
+    background-image: url('imghome/anhsp8.png');
+}
+
+.hinh-9 {
+    background-image: url('imghome/anhsp9.png');
+}
+
+.hinh-10 {
+    background-image: url('imghome/anhsp10.png');
+}
+
+.hinh-11 {
+    background-image: url('imghome/anhsp11.png');
+}
+
+.hinh-12 {
+    background-image: url('imghome/anhsp12.png');
+}
+
+.hinh-13 {
+    background-image: url('imghome/anhsp13.png');
+}
+
+.hinh-14 {
+    background-image: url('imghome/anhsp14.png');
+}
+
+.hinh-15 {
+    background-image: url('imghome/anhsp15.png');
+}
+
+.hinh-16 {
+    background-image: url('imghome/anhsp16.png');
+}
+
+.hinh-17 {
+    background-image: url('imghome/anhsp17.png');
+}
+
+.hinh-18 {
+    background-image: url('imghome/anhsp18.png');
+}
+
+.hinh-19 {
+    background-image: url('imghome/anhsp19.png');
+}
+
+.hinh-20 {
+    background-image: url('imghome/anhsp20.png');
+}
+
+.tieu-de-san-pham {
+    background: #ffc107;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.mo-ta-san-pham {
+    background: white;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+}
+
+.khung33 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.khung32 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.khung34 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.khung35 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 20px 20px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+/*phần chân trang */
+.chan-trang {
+    background: #555555;
+    padding: 40px 20px;
+}
+
+.khung-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+}
+
+.logo-footer {
+    flex: 0 0 200px;
+}
+
+.logo-footer img {
+    width: 150px;
+    height: auto;
+}
+
+.cot-menu {
+    flex: 1;
+}
+
+.tieu-de-cot {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.danh-sach-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.muc-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.icon-menu {
+    width: 24px;
+    height: 24px;
+    background: #757575;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.ten-menu {
+    color: #e0e0e0;
+}
+
+.cot-menu:last-child {
+    padding-top: 48px;
+    /* Đẩy xuống bằng với các mục menu khác */
+}
+
+/*phần hiệu ứng */
+/* Hiệu ứng hover cho mục menu */
+.menuitem:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dangnhap:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.dangky:hover {
+    background-color: rgb(250, 172, 24);
+    cursor: pointer;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+/* Hiệu ứng hover cho anhnen */
+.nutbatdau:hover {
+    background-color: rgb(250, 172, 24);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.nutkhampha:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.xemthietke:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng hover cho thẻ sản phẩm */
+.the-san-pham:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Zoom ảnh khi hover */
+.hinh-anh-san-pham:hover {
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng hover cho  Link "View all >"*/
+.xem-tat-ca:hover {
+    color: #FAC62D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Hiệu ứng hover cho mục menu ở chân trang */
+.muc-menu:hover {
+    color: #FAC62D;
+    cursor: pointer;
+}
+
+.muc-menu:hover .icon-menu {
+    background-color: #FAC62D;
+}
+
+/* Hiệu ứng hover cho ảnh trong khung 1 và khung 2 */
+.anh1:hover,
+.anh2:hover,
+.anh3:hover,
+.anh4:hover,
+.anh5:hover,
+.anh6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.anhtrai1:hover,
+.anhtrai2:hover,
+.anhtrai3:hover,
+.anhtrai4:hover,
+.anhtrai5:hover,
+.anhtrai6:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.menuitem,
+.dangnhap,
+.dangky,
+.nutbatdau,
+.the-san-pham,
+.xem-tat-ca,
+.muc-menu,
+.hinh-anh-san-pham,
+.icon-menu,
+.anh1,
+.anh2,
+.anh3,
+.anh4,
+.anh5,
+.anh6,
+.anhtrai1,
+.anhtrai2,
+.anhtrai3,
+.anhtrai4,
+.anhtrai5,
+.anhtrai6 {
+    transition: all 0.3s ease;
+}
