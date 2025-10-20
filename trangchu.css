@@ -142,6 +142,8 @@
     background-color: #FAC62D;
     border-radius: 5px;
     display: inline-block;
+    text-decoration: none;
+    color: #000;
 }
 
 /* phan gioi thieu */
@@ -237,6 +239,8 @@
     display: inline-block;
     align-self: flex-start;
     margin-top: 20px;
+    text-decoration: none;
+    color: #000;
 }
 
 /*phần khung 2*/
@@ -281,6 +285,8 @@
     display: inline-block;
     align-self: flex-start;
     margin-top: 20px;
+    text-decoration: none;
+    color: #000;
 }
 
 .anhbentrai {
