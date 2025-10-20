@@ -49,6 +49,8 @@
 
 .menuitem {
     margin-left: 20px;
+    text-decoration: none;  /* Tắt gạch chân */
+    color: #000;            /* Đổi màu chữ về màu đen */
 }
 
 .thanhtimkiem {
@@ -165,37 +167,37 @@
     align-items: flex-start;
 }
 
-.anh1.responsive {
+.anh1 {
     background-image: url('imghome/anhnen1.png');
 }
 
-.anh2.responsive {
+.anh2 {
     background-image: url('imghome/anhnen2.png');
 }
 
-.anh3.responsive {
+.anh3 {
     background-image: url('imghome/anhnen3.png');
 }
 
-.anh4.responsive {
+.anh4 {
     background-image: url('imghome/anhnen4.png');
 }
 
-.anh5.responsive {
+.anh5 {
     background-image: url('imghome/anhnen5.png');
 }
 
-.anh6.responsive {
+.anh6 {
     background-image: url('imghome/anhnen6.png');
 }
 
 /*lưu ý chỗ này */
-.anh1.responsive,
-.anh2.responsive,
-.anh3.responsive,
-.anh4.responsive,
-.anh5.responsive,
-.anh6.responsive {
+.anh1,
+.anh2,
+.anh3,
+.anh4,
+.anh5,
+.anh6 {
     width: 267px;
     height: 178px;
     background-size: cover;
@@ -569,6 +571,7 @@
     gap: 12px;
     color: #e0e0e0;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .icon-menu {
@@ -681,28 +684,4 @@
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-}
-
-.menuitem,
-.dangnhap,
-.dangky,
-.nutbatdau,
-.the-san-pham,
-.xem-tat-ca,
-.muc-menu,
-.hinh-anh-san-pham,
-.icon-menu,
-.anh1,
-.anh2,
-.anh3,
-.anh4,
-.anh5,
-.anh6,
-.anhtrai1,
-.anhtrai2,
-.anhtrai3,
-.anhtrai4,
-.anhtrai5,
-.anhtrai6 {
-    transition: all 0.3s ease;
 }
