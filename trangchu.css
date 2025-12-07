@@ -535,6 +535,23 @@ body {
 .muc-menu:hover .icon-menu {
     background-color: #FAC62D;
 }
+/* ==========================================================================
+    KHAI BÁO Chuyển Động VÔ TRANG BACKGROUND (BACKGROUND ANIMATION)
+   ========================================================================== */
+   .noidunganhnen {
+    animation: hienLen 1s ease-in-out;
+}
+   @keyframes hienLen {
+    from {
+        opacity: 0;                 /* Bắt đầu: Trong suốt (không nhìn thấy) */
+        transform: translateY(30px); /* Bắt đầu: Nằm thấp hơn vị trí gốc 30px */
+    }
+
+    to {
+        opacity: 1;                 /* Kết thúc: Hiện rõ 100% */
+        transform: translateY(0);    /* Kết thúc: Về đúng vị trí ban đầu */
+    }
+}
 
 /* ==========================================================================
    8. KHAI BÁO ẢNH (BACKGROUND IMAGES) - GOM VỀ MỘT CHỖ CHO GỌN
@@ -929,6 +946,9 @@ body {
 
 /* --- MOBILE NHỎ (Max-width: 320px) --- */
 @media screen and (max-width: 320px) {
+    .icon{
+        display: none;
+    }
 
     .the-san-pham,
     .the-san-pham-an {
@@ -967,13 +987,8 @@ body {
 
     .benphai {
         display: none;
-    }
-
-    .timkiem p {
+    }     
+    .logo-footer{
         display: none;
-    }
-
-    .thanhtimkiem {
-        border: solid 3px white;
     }
 }

@@ -188,7 +188,7 @@ img {
 .anh-bia-lienhe {
     min-height: 400px;
     background: linear-gradient(rgba(14, 61, 89, 0.85), rgba(14, 61, 89, 0.7)), 
-                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+                url('imglienhe/anh1.avif'); 
     background-size: cover; 
     background-position: center;
     display: flex; 
@@ -274,7 +274,7 @@ img {
     height: 250px;
     width: 100%;
     border-radius: 8px;
-    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-image: url('imglienhe/anh2.avif');
     background-size: cover;
     background-position: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -392,7 +392,6 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #e0e0e0;
     font-size: 14px;
     text-decoration: none;
 }
@@ -456,6 +455,23 @@ img {
 
 .muc-menu:hover .icon-menu {
     background-color: #FAC62D;
+}
+/* ==========================================================================
+    KHAI BÁO Chuyển Động VÔ TRANG BACKGROUND (BACKGROUND ANIMATION)
+   ========================================================================== */
+   .noidung-anh-bia {
+    animation: hienLen 1s ease-in-out;
+}
+   @keyframes hienLen {
+    from {
+        opacity: 0;                 /* Bắt đầu: Trong suốt (không nhìn thấy) */
+        transform: translateY(30px); /* Bắt đầu: Nằm thấp hơn vị trí gốc 30px */
+    }
+
+    to {
+        opacity: 1;                 /* Kết thúc: Hiện rõ 100% */
+        transform: translateY(0);    /* Kết thúc: Về đúng vị trí ban đầu */
+    }
 }
 
 
@@ -613,5 +629,11 @@ img {
     }
     .bentrai {
         justify-content: space-between;
+    }
+    .icon{
+        display: none;
+    }
+     .logo-footer{
+        display: none;
     }
 }

@@ -629,10 +629,19 @@ section {
         gap: 1.5rem;
         width: 90%;
     }
-
-    .the-gia-tri {
-        width: calc((100% - 2rem) / 2);
+.luoi-gia-tri {
+        gap: 1rem; /* Giảm khoảng cách giữa các ô xuống cho đỡ rộng */
+        justify-content: center; /* Căn giữa */
     }
+
+    /* Tác động vào THẺ CON (.the-gia-tri) chứ không phải thẻ cha */
+    .the-gia-tri {
+        /* Chiếm gần 50% chiều rộng, trừ đi khoảng hở */
+        width: calc(50% - 1rem); 
+       
+    }
+
+    
 
 
     .anh-nen-chinh h1 {
@@ -640,9 +649,7 @@ section {
     }
 
 
-    .the-gia-tri {
-        width: 100%;
-    }
+    
 
     .menu {
         display: none;
@@ -706,5 +713,17 @@ section {
     }
     .bentrai {
         justify-content: space-between;
+    }
+    
+}
+@media screen and (max-width: 320px) {
+    .icon{
+        display: none;
+    }
+     .logo-footer{
+        display: none;
+    }
+    .the-gia-tri {
+        width: 100%; /* Về 1 cột cho dễ đọc */
     }
 }
