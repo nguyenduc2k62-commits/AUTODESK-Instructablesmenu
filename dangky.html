@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUTODESK Instructables</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="gioithieu.css">
+    <link rel="stylesheet" href="dangky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="imghome/favicon1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
     <div class="menu-container">
         <div class="bentrai">
             <!-- 1. NÚT 3 GẠCH (Đặt trong Header/Menu Container của bạn) -->
@@ -43,94 +47,40 @@
             </div>
         </div>
     </div>
+    <!--phan than-->
+    <div class="noi-dung-chinh">
+        <div class="khung-chua">
 
+            <div class="bang-trai">
+                <h1>Tạo Tài Khoản</h1>
+                <p class="tieu-de-phu">Đăng ký miễn phí</p>
 
-    <header class="anh-nen-chinh">
-        <div class="noi-dung-anh-nen">
-            <h1>Câu Chuyện Của Chúng Tôi</h1>
-            <p>Nơi bắt nguồn của những ý tưởng sáng tạo không giới hạn.</p>
-        </div>
-    </header>
+                <div id="formDangKy">
+                    <div class="nhom-nhap">
+                        <input type="text" placeholder="Họ tên">
+                    </div>
 
-    <section>
-        <div class="tieu-de-phan">
-            <h2>Về <span>Chúng Tôi</span></h2>
-        </div>
+                    <div class="nhom-nhap">
+                        <input type="text" placeholder="Email">
+                    </div>
 
-        <div class="khung-gioi-thieu">
-            <div class="anh-gioi-thieu">
-                <img src="imggioithieu/anh2.avif" alt="Sáng tạo nghệ thuật">
-            </div>
-            <article class="thong-tin-gioi-thieu">
-                <h3>Khởi Nguồn Đam Mê</h3>
-                <p>Từ năm 2018, <strong>Autodesk Instructables</strong> tự hào là điểm đến tin cậy cho những người yêu
-                    mến và muốn thực hành đồ thủ công mỹ nghệ tại Việt Nam.</p>
-                <p>Đến nay, chúng tôi đã phát triển thành một kho tàng khổng lồ với hơn <strong>150.000</strong> ý tưởng
-                    độc đáo, giúp hàng triệu người tự tay làm nên những sản phẩm tuyệt vời.</p>
-            </article>
-        </div>
+                    <div class="nhom-nhap">
+                        <input type="password" placeholder="Mật khẩu">
+                    </div>
 
-        <div class="khung-su-menh">
-            <div class="noi-dung-su-menh">
-                <article class="thong-tin-gioi-thieu">
-                    <h3>Tầm Nhìn & Sứ Mệnh</h3>
-                    <p><strong>Tầm Nhìn:</strong> Kiến tạo một thế giới nơi sự sáng tạo là không giới hạn, và bất kỳ ai
-                        cũng có thể trở thành nghệ nhân.</p>
-                    <p><strong>Sứ Mệnh:</strong> Lan tỏa những câu chuyện truyền cảm hứng, kết nối cộng đồng những người
-                        yêu cái đẹp và giá trị thủ công.</p>
-                </article>
-                <div class="anh-su-menh">
-                    <img src="imggioithieu/anh3.avif" alt="Kết nối cộng đồng">
+                    <button type="button" class="nut-dang-ky">Đăng ký</button>
                 </div>
             </div>
+            <div class="bang-phai">
+                <div class="noi-dung-phai">
+                    <h1>Tham gia cùng tôi!</h1>
+                    <p>Nhập thông tin cá nhân để bắt đầu hành trình.</p>
+                    <button class="nut-dang-nhap" onclick="window.location.href='dangnhap.html'">ĐĂNG NHẬP</button>
+                </div>
+            </div>
+
         </div>
-    </section>
-
-    <div class="phan-gia-tri-cot-loi">
-        <section>
-            <div class="tieu-de-phan">
-                <h2>Giá Trị <span>Cốt Lõi</span></h2>
-            </div>
-            <div class="luoi-gia-tri">
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-crown"></i></span>
-                    <h4>Dũng Cảm</h4>
-                    <p>Dám tiên phong cho tính vực mới, thị trường mới và bứt phá khỏi vùng an toàn.</p>
-                </article>
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-thumbs-up"></i></span>
-                    <h4>Phục Vụ</h4>
-                    <p>Luôn sẵn sàng hỗ trợ và phục vụ vì sự hài lòng và phát triển của đối tác và khách hàng.</p>
-                </article>
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-heart"></i></span>
-                    <h4>Tình Yêu</h4>
-                    <p>Yêu sản phẩm và tự hào về chính công việc mình đang làm.</p>
-                </article>
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-lightbulb"></i></span>
-                    <h4>Đổi Mới</h4>
-                    <p>Mô hình kinh doanh của chúng tôi là một mô hình mới và đang trở nên đa dạng.</p>
-                </article>
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-shield-alt"></i></span>
-                    <h4>Niềm Tin</h4>
-                    <p>Tin tưởng vào mối quan hệ Đối tác - Khách hàng cuối, vào tầm nhìn và sứ mệnh của công ty.</p>
-                </article>
-                <article class="the-gia-tri">
-                    <span class="icon-gia-tri"><i class="fas fa-check-circle"></i></span>
-                    <h4>Sự Thật</h4>
-                    <p>AUTODESK Instructables cam kết luôn truyền thống đúng sự thật và chia sẻ đúng.</p>
-                </article>
-            </div>
-        </section>
     </div>
-
-    <div class="keu-goi-hanh-dong">
-        <h2>Bạn Đã Sẵn Sàng Sáng Tạo Chưa?</h2>
-        <a href="lienhe.html" class="nut-keu-goi">Liên Hệ Ngay</a>
-    </div>
-
     <!--chân trang -->
     <div class="chan-trang">
         <div class="khung-footer">
@@ -238,15 +188,11 @@
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
             <h3>Menu</h3>
-            <!-- Nút đóng (X) -->
             <div class="close-btn" onclick="toggleMenu()">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
 
-
-
-        <!-- Các liên kết trong menu -->
         <a href="index.html" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Trang chủ</a>
         <a href="gioithieu.html" onclick="toggleMenu()"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a>
         <a href="duan.html" onclick="toggleMenu()"><i class="fa-solid fa-layer-group"></i> Dự án</a>
@@ -257,23 +203,15 @@
         <a href="dangnhap.html" onclick="toggleMenu()"><i class="fa-solid fa-user"></i> Đăng nhập</a>
         <a href="dangky.html" onclick="toggleMenu()"><i class="fa-solid fa-user-plus"></i> Đăng ký</a>
     </div>
-</body>
-<div class="mobile-sidebar" id="mobileSidebar">
-</div>
 
-<script>
-    function toggleMenu() {
-        // 1. Lấy phần tử menu
-        var sidebar = document.getElementById("mobileSidebar");
-
-        // 2. Lấy phần tử lớp phủ mờ
-        var overlay = document.getElementById("overlay");
-
-        // 3. Thêm hoặc bỏ class 'active' cho cả 2
-        sidebar.classList.toggle("active");
-        overlay.classList.toggle("active");
-    }
-</script>
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("mobileSidebar");
+            var overlay = document.getElementById("overlay");
+            sidebar.classList.toggle("active");
+            overlay.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>

@@ -149,38 +149,102 @@ img {
 
 
 /* Khối bên phải (Đăng nhập/Đăng ký) */
+/* --- Khối bao quanh 2 nút --- */
 .benphai {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: white;
+    gap: 15px; /* Khoảng cách giữa 2 nút */
+    margin-left: 12px;
 }
 
+/* ======================================================
+   NÚT ĐĂNG NHẬP (CĂN GIỮA CHUẨN)
+   ====================================================== */
 .dangnhap {
-    width: 98px;
+    /* 1. Kích thước & Flexbox để căn giữa */
     height: 40px;
-    margin-left: 20px;
-    color: #0e3d59;
-    border: solid 2px #0e3d59;
-    font-weight: 600;
-    border-radius: 10px;
+    min-width: 110px; /* Đặt độ rộng tối thiểu thay vì cố định */
+    padding: 0 15px;  /* Khoảng đệm 2 bên để chữ không sát viền */
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    
+    /* 2. Giao diện */
+    border: 2px solid #0e3d59;
+    border-radius: 8px; /* Bo góc nhẹ */
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.dangky {
-    width: 98px;
-    height: 40px;
-    margin-left: 20px;
-    background-color: #0e3d59;
-    border-radius: 10px;
-    color: #ffffff;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Định dạng cho thẻ a (link) hoặc chữ bên trong nút */
+.dangnhap a, 
+.dangnhap p,
+.dangnhap span { 
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #0e3d59;        /* Màu chữ xanh */
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;             /* QUAN TRỌNG: Xóa khoảng cách thừa */
+    padding: 0;
+    line-height: 1;        /* Giúp chữ không bị lệch dòng */
+    display: block;        /* Giúp thẻ a chiếm không gian tốt hơn */
 }
+
+/* Hiệu ứng Hover */
+.dangnhap:hover {
+    background-color: #0e3d59;
+}
+.dangnhap:hover a {
+    color: white; /* Đổi màu chữ thành trắng khi hover */
+}
+
+
+/* ======================================================
+   NÚT ĐĂNG KÝ (CĂN GIỮA CHUẨN)
+   ====================================================== */
+.dangky {
+    /* 1. Kích thước & Flexbox */
+    height: 40px;
+    min-width: 110px;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;     /* Căn giữa dọc */
+    justify-content: center; /* Căn giữa ngang */
+
+    /* 2. Giao diện */
+    background-color: #0e3d59; /* Màu nền xanh */
+    border: 2px solid #0e3d59;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Định dạng chữ bên trong */
+.dangky a,
+.dangky p,
+.dangky span {
+    text-decoration: none;
+    color: white !important; /* Bắt buộc chữ màu trắng */
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Hiệu ứng Hover */
+.dangky:hover {
+    background-color: #ffc107; /* Chuyển màu vàng cam */
+    border-color: #ffc107;
+}
+.dangky:hover a {
+    color: #0e3d59 !important; /* Chữ chuyển màu xanh đen */
+}
+
 
 /* =========================================================
    3. ẢNH BÌA (HERO BANNER)
@@ -630,10 +694,106 @@ img {
     .bentrai {
         justify-content: space-between;
     }
+    
+    }
+     .logo-footer{
+        display: none;
+    }
+@media screen and (max-width: 320px) {
     .icon{
         display: none;
     }
      .logo-footer{
         display: none;
+    }
+    .the-gia-tri {
+        width: 100%; /* Về 1 cột cho dễ đọc */
+    }
+}
+/* --- Nút 3 gạch --- */
+.basoc {
+    display: none; /* Ẩn trên máy tính */
+    font-size: 24px;
+    cursor: pointer;
+    color: #0e3d59;
+}
+
+/* --- Menu trượt (Sidebar) --- */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Giấu menu sang bên trái */
+    width: 280px;
+    height: 100vh; /* Cao full màn hình */
+    background-color: white;
+    z-index: 1100; /* Nằm trên cùng */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    transition: left 0.3s ease-in-out; /* Hiệu ứng trượt mượt */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Class này được JS thêm vào để hiện menu */
+.mobile-sidebar.active {
+    left: 0;
+}
+
+/* Header bên trong menu (chứa nút đóng) */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Nút đóng X */
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Style cho các link trong menu */
+.mobile-sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #0e3d59;
+    font-weight: 600;
+    font-size: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-sidebar a:hover {
+    background-color: #f9f9f9;
+    color: #ffc107;
+}
+
+/* --- Lớp phủ mờ (Overlay) --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* Màu đen mờ 50% */
+    z-index: 1050; /* Nằm dưới menu nhưng trên web */
+    display: none; /* Mặc định ẩn */
+}
+
+.overlay.active {
+    display: block; /* Hiện khi active */
+}
+
+/* --- Responsive: Chỉ hiện nút 3 gạch trên mobile --- */
+@media screen and (max-width: 768px) {
+    .basoc {
+        display: block;
     }
 }

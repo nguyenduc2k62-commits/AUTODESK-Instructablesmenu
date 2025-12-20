@@ -19,7 +19,8 @@
 <body>
     <div class="menu-container">
         <div class="bentrai">
-            <div class="basoc">
+            <!-- 1. NÚT 3 GẠCH (Đặt trong Header/Menu Container của bạn) -->
+            <div class="basoc" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="icon">
@@ -39,10 +40,10 @@
         </div>
         <div class="benphai">
             <div class="dangnhap">
-                <p>Đăng nhập</p>
+                <a href="dangnhap.html" class="menuitem"> Đăng nhập </a>
             </div>
             <div class="dangky">
-                <p>Đăng ký</p>
+                <a href="dangky.html" class="menuitem"> Đăng ký </a>
             </div>
         </div>
     </div>
@@ -369,6 +370,50 @@
             </div>
         </div>
     </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Nội dung Menu trượt -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <!-- Nút đóng (X) -->
+            <div class="close-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+
+
+        <!-- Các liên kết trong menu -->
+        <a href="index.html" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Trang chủ</a>
+        <a href="gioithieu.html" onclick="toggleMenu()"><i class="fa-solid fa-circle-info"></i> Giới thiệu</a>
+        <a href="duan.html" onclick="toggleMenu()"><i class="fa-solid fa-layer-group"></i> Dự án</a>
+        <a href="lienhe.html" onclick="toggleMenu()"><i class="fa-solid fa-envelope"></i> Liên hệ</a>
+
+        <hr style="width: 90%; margin: 10px auto; border: 0; border-top: 1px solid #eee;">
+
+        <a href="dangnhap.html" onclick="toggleMenu()"><i class="fa-solid fa-user"></i> Đăng nhập</a>
+        <a href="dangky.html" onclick="toggleMenu()"><i class="fa-solid fa-user-plus"></i> Đăng ký</a>
+    </div>
 </body>
+<div class="mobile-sidebar" id="mobileSidebar">
+</div>
+
+<script>
+    function toggleMenu() {
+        // 1. Lấy phần tử menu
+        var sidebar = document.getElementById("mobileSidebar");
+
+        // 2. Lấy phần tử lớp phủ mờ
+        var overlay = document.getElementById("overlay");
+
+        // 3. Thêm hoặc bỏ class 'active' cho cả 2
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    }
+</script>
+</body>
+
+</html>
 
 </html>

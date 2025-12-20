@@ -1,36 +1,17 @@
-/* =========================================================
-   1. CẤU HÌNH CƠ BẢN
-   ========================================================= */
+/* ==========================================================================
+   1. CẤU HÌNH CHUNG (RESET)
+   ========================================================================== */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333333;
-    /* Màu chữ đen xám */
-    background-color: #ffffff;
-    /* Màu trắng */
-    overflow-x: hidden;
-    padding-top: 80px;
-}
-
-a {
-    text-decoration: none;
-    transition: all 0.3s linear;
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
 }
 
 /* ==========================================================================
@@ -62,9 +43,6 @@ img {
     flex: 1;
 }
 
-.basoc {
-    display: none;
-}
 
 /* Logo */
 .icon {
@@ -99,32 +77,26 @@ img {
 
 /* Thanh tìm kiếm - Container */
 .thanhtimkiem {
-    flex: 1 1 auto;
-    max-width: 700px;
-    height: 40px;
+    flex: 1 1 auto; 
+    max-width: 700px; 
+    height: 40px; 
     margin-left: 78px;
-    border-radius: 20px;
-    border: 3px solid #BBBBBB;
+    border-radius: 20px; 
+    border: 3px solid #BBBBBB; 
     padding: 0 20px;
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: space-between;
-    background: #ffffff;
-    /* Nền trắng */
-    transition: all 0.3s ease;
-    /* Hiệu ứng mượt */
+    background: #ffffff; /* Nền trắng */
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
 }
 
 /* Ô input bên trong */
 .thanhtimkiem input {
-    border: none;
-    /* Tắt viền */
-    background: transparent;
-    /* Nền trong suốt */
-    outline: none;
-    /* Tắt viền xanh xấu */
-    width: 100%;
-    /* Rộng 100% */
+    border: none; /* Tắt viền */
+    background: transparent; /* Nền trong suốt */
+    outline: none; /* Tắt viền xanh xấu */
+    width: 100%; /* Rộng 100% */
     font-size: 15px;
     color: #333333;
     font-family: 'Open Sans', sans-serif;
@@ -137,28 +109,24 @@ img {
 }
 
 /* Icon search */
-.iconsearch {
-    margin-left: 15px;
-    /* Khoảng cách với input */
-    color: #0e3d59;
+.iconsearch { 
+    margin-left: 15px; /* Khoảng cách với input */
+    color: #0e3d59; 
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 /* Hiệu ứng khi focus (đang gõ) */
 .thanhtimkiem:focus-within {
-    border-color: #0e3d59;
-    /* Viền đổi màu xanh */
-    box-shadow: 0 4px 12px rgba(14, 61, 89, 0.15);
-    /* Bóng đổ */
+    border-color: #0e3d59; /* Viền đổi màu xanh */
+    box-shadow: 0 4px 12px rgba(14, 61, 89, 0.15); /* Bóng đổ */
 }
 
 .thanhtimkiem:focus-within .iconsearch {
-    color: #ffc107;
-    /* Icon đổi màu vàng */
-    transform: scale(1.1);
-    /* Phóng to nhẹ */
+    color: #ffc107; /* Icon đổi màu vàng */
+    transform: scale(1.1); /* Phóng to nhẹ */
 }
+
 
 
 /* Khối bên phải (Đăng nhập/Đăng ký) */
@@ -258,245 +226,195 @@ img {
     color: #0e3d59 !important; /* Chữ chuyển màu xanh đen */
 }
 
-/* =========================================================
-   3. ẢNH BÌA CHÍNH (HERO BANNER)
-   ========================================================= */
-.anh-nen-chinh {
-    min-height: 60vh;
-    background-image: linear-gradient(rgba(14, 61, 89, 0.7), rgba(14, 61, 89, 0.6)),
-        url('imggioithieu/anh1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* ==========================================================================
+   PHẦN NỘI DUNG ĐĂNG KÝ (Đã chỉnh khoảng cách & độ cong chuẩn)
+   ========================================================================== */
+.noi-dung-chinh {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    background: #f2f5f8; /* Màu nền xám xanh nhẹ hiện đại */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    color: #ffffff;
+    padding: 40px 20px;
 }
 
-.noi-dung-anh-nen {
-    animation: hienLen 1s ease-out;
-}
-
-.anh-nen-chinh h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.anh-nen-chinh p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-}
-
-/* =========================================================
-   4. NỘI DUNG GIỚI THIỆU
-   ========================================================= */
-section {
-    padding: 5rem 0;
-    width: 90vw;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tieu-de-phan {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.tieu-de-phan h2 {
-    font-size: 2.5rem;
-    color: #0e3d59;
-    text-transform: uppercase;
-}
-
-.tieu-de-phan span {
-    color: #ffc107;
-}
-
-/* Flexbox Giới thiệu */
-.khung-gioi-thieu,
-.noi-dung-su-menh {
+.khung-chua {
     display: flex;
-    align-items: center;
-    gap: 4rem;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-}
-
-.anh-gioi-thieu,
-.anh-su-menh,
-.thong-tin-gioi-thieu {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Ảnh */
-.anh-gioi-thieu img,
-.anh-su-menh img {
+    background: white;
+    border-radius: 20px; /* Bo góc tổng thể của khung */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1); /* Bóng đổ mềm mại */
+    overflow: hidden;
+    animation: slideUp 0.6s ease-out;
+    max-width: 960px; /* Rộng hơn chút để form thoáng */
     width: 100%;
-    border-radius: 8px;
-    height: 400px;
-    object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: 0.3s;
+    min-height: 550px; /* Tăng chiều cao để các ô không bị dính */
 }
 
-.anh-gioi-thieu img:hover,
-.anh-su-menh img:hover {
+/* --- Cột Trái: FORM NHẬP LIỆU --- */
+.bang-trai {
+    flex: 1.2; /* Chiếm 60% chiều rộng (Rộng hơn bên phải chút) */
+    padding: 40px 60px; /* Padding lớn để nội dung lùi vào giữa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    text-align: center;
+}
+
+.bang-trai h1 {
+    font-size: 2.2rem; /* Chữ to hơn */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tieu-de-phu {
+    color: #999;
+    margin-bottom: 40px; /* Cách xa form ra */
+    font-size: 1rem;
+    
+}
+
+/* Các ô input */
+.nhom-nhap {
+    margin-bottom: 20px; /* Khoảng cách giữa các ô input */
+}
+
+.nhom-nhap input {
+    width: 100%;
+    padding: 15px 20px; /* Ô input cao và thoáng hơn */
+    border: none;
+    background: #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.nhom-nhap input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.nhom-nhap input:focus {
+    outline: none;
+    background: #e8e8e8;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
     transform: scale(1.02);
 }
 
-/* Viền khung sau ảnh */
-.anh-gioi-thieu,
-.anh-su-menh {
-    position: relative;
-}
-
-.anh-gioi-thieu::before {
-    content: "";
-    position: absolute;
+/* Nút Đăng Ký */
+.nut-dang-ky {
     width: 100%;
-    height: 100%;
-    border: 5px solid #ffc107;
-    top: -1.5rem;
-    left: -1.5rem;
-    z-index: -1;
-    border-radius: 8px;
-}
-
-.anh-su-menh::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 5px solid #0e3d59;
-    top: 1.5rem;
-    left: 1.5rem;
-    z-index: -1;
-    border-radius: 8px;
-}
-
-.thong-tin-gioi-thieu h3 {
-    color: #0e3d59;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.thong-tin-gioi-thieu p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #555555;
-}
-
-.khung-su-menh {
-    margin-top: 6rem;
-}
-
-/* =========================================================
-   5. GIÁ TRỊ CỐT LÕI
-   ========================================================= */
-.phan-gia-tri-cot-loi {
-    background: #f8f9fa;
-    width: 100%;
-    margin-bottom: 5rem;
-}
-
-.luoi-gia-tri {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: 90vw;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-/* Thẻ giá trị */
-.the-gia-tri {
-    background: #ffffff;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
-    border: 1px solid #eee;
-
-    width: calc((100% - 4rem) / 3);
-    min-width: 280px;
-    flex-grow: 1;
-}
-
-.the-gia-tri:hover {
-    transform: translateY(-10px);
+    padding: 15px;
     background: #0e3d59;
-    color: #ffffff;
-    box-shadow: 0 15px 30px rgba(14, 61, 89, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Bo tròn hình viên thuốc */
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px; /* Cách xa input cuối cùng */
+    transition: transform 0.2s;
+    text-transform: uppercase;
 }
 
-.icon-gia-tri {
-    font-size: 2.5rem;
-    color: #0e3d59;
-    display: block;
-    margin-bottom: 1.5rem;
-    transition: 0.3s;
+.nut-dang-ky:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(127, 0, 255, 0.6);
 }
 
-.the-gia-tri:hover .icon-gia-tri {
-    color: #ffc107;
-}
-
-.the-gia-tri h4 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-.the-gia-tri:hover p {
-    color: #eeeeee;
-}
-
-/* =========================================================
-   6. THANH KÊU GỌI (CTA)
-   ========================================================= */
-.keu-goi-hanh-dong {
+/* --- Cột Phải: BACKGROUND GRADIENT & CONG --- */
+.bang-phai {
+    flex: 0.8; /* Chiếm 40% chiều rộng */
+    /* Màu đơn sắc đẹp - xanh dương đậm */
     background: #0e3d59;
-    padding: 4rem 2rem;
+    color: white;
+    padding: 40px 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    gap: 3rem;
-
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto 80px auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; /* Để nội dung đè lên trên */
+    z-index: 1;
 }
 
-.keu-goi-hanh-dong h2 {
+.bang-phai h1 {
     font-size: 2rem;
-    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.nut-keu-goi {
-    background: #ffc107;
-    color: #0e3d59;
-    padding: 1rem 2.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: 0.3s;
-    white-space: nowrap;
+.bang-phai p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
-.nut-keu-goi:hover {
-    background: #ffffff;
-    transform: translateY(-3px);
+.nut-dang-nhap {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 45px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
+.nut-dang-nhap:hover {
+    background: white;
+    color: #d64c7f; /* Màu chữ khi hover đổi theo màu nền */
+    transform: scale(1.05);
+}
+
+/* --- Animation --- */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive cho Mobile --- */
+@media screen and (max-width: 768px) {
+    .khung-chua {
+        flex-direction: column-reverse; /* Đảo ngược thứ tự trên mobile */
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    .bang-trai {
+        flex: 1;
+        padding: 40px 30px;
+        order: 2; /* Form xuống dưới */
+    }
+
+    .bang-phai {
+        flex: 1;
+        padding: 40px 30px;
+        order: 1; /* Màu lên trên */
+    }
+
+    .bang-trai h1 {
+        font-size: 1.8rem;
+    }
+
+    .bang-phai h1 {
+        font-size: 2rem;
+    }
+}
 /* ==========================================================================
    6. FOOTER (CHÂN TRANG)
    ========================================================================== */
@@ -567,48 +485,20 @@ section {
 .cot-menu:last-child {
     padding-top: 48px;
 }
-
-.nutanbth {
+.nutanbth{
     display: none;
 }
-
 .menuitem:hover {
     text-decoration: underline;
     cursor: pointer;
     color: #ffc107;
 }
 
-.dangnhap:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-}
-
-.dangky:hover {
-    background-color: rgb(250, 172, 24);
-    cursor: pointer;
-}
-
-.icon:hover {
-    cursor: pointer;
-}
-
-@keyframes hienLen {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================================================
-   8. RESPONSIVE
-   ========================================================= */
 /* --- TABLET / LAPTOP (Max-width: 1024px) --- */
 @media screen and (max-width: 1024px) {
+    .the-san-pham-an {
+        display: none;
+    }
 
     /* Menu container thẳng hàng 1 dòng */
     .menu-container {
@@ -637,7 +527,7 @@ section {
     }
 
     .menu {
-        margin-left: 0 ;
+        margin-left: 0 !important;
         display: flex;
         flex: none;
     }
@@ -646,14 +536,14 @@ section {
         margin-left: 15px;
         font-size: 13px;
     }
- .thanhtimkiem {
-        margin-left: 15px ;
+
+    .thanhtimkiem {
+        margin-left: 15px !important;
         flex-grow: 1;
         width: auto;
         height: 36px;
         max-width: 300px;
     }
-    
 
     .benphai {
         position: static;
@@ -669,125 +559,19 @@ section {
         margin-left: 10px;
         margin-right: 0;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .khung-gioi-thieu{
-        flex-direction: column-reverse;
-        gap: 3rem;
-    }
-    .noi-dung-su-menh {
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .anh-gioi-thieu::before,
-    .anh-su-menh::before {
-        display: none;
-    }
-
-    .keu-goi-hanh-dong {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        width: 90%;
-    }
-.luoi-gia-tri {
-        gap: 1rem; /* Giảm khoảng cách giữa các ô xuống cho đỡ rộng */
-        justify-content: center; /* Căn giữa */
-    }
-
-    /* Tác động vào THẺ CON (.the-gia-tri) chứ không phải thẻ cha */
-    .the-gia-tri {
-        /* Chiếm gần 50% chiều rộng, trừ đi khoảng hở */
-        width: calc(50% - 1rem); 
-       
-    }
-
-    
-
-
-    .anh-nen-chinh h1 {
-        font-size: 2.5rem;
-    }
-
-
-    
-
-    .menu {
-        display: none;
-    }
-
-    .benphai {
-        display: none;
-    }
-
-    .basoc {
-        display: block;
-        font-size: 30px;
-        color: #757575;
-    }
-    .cot-menu {
-        display: none;
-    }
-
-    .nutanbth {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .khampha,
-    .hotro {
-        width: 100%;
-    }
-
-    .khampha,
-    .lienhe {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 16px 20px;
-        background-color: #ffffff;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #0e3d59;
-        font-weight: 700;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .khampha:hover,
-    .lienhe:hover {
-        background-color: #ffc107;
-        color: #0e3d59;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .khampha p,
-    .lienhe p {
-        margin: 0;
-        font-size: 16px;
-    }
-    .bentrai {
-        justify-content: space-between;
-    }
-    
-}
+}/* --- MOBILE NHỎ (Max-width: 320px) --- */
 @media screen and (max-width: 320px) {
     .icon{
         display: none;
     }
-     .logo-footer{
+     .menu {
         display: none;
     }
-    .the-gia-tri {
-        width: 100%; /* Về 1 cột cho dễ đọc */
+    .benphai {
+        display: none;
+    }     
+    .logo-footer{
+        display: none;
     }
 }
 /* --- Nút 3 gạch --- */
@@ -875,5 +659,40 @@ section {
 @media screen and (max-width: 768px) {
     .basoc {
         display: block;
+    }
+    .benphai {
+        display: none;
+    }
+    .cot-menu{
+        display: none;
+    }
+     .bentrai {
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .nutanbth {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+     .khampha,
+    .lienhe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 16px 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #0e3d59;
+        font-weight: 700;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 }
